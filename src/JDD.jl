@@ -4,7 +4,7 @@ using Debugger
 using HTTP
 using HTTP.WebSockets
 using JSON2
-using Match
+using Rematch
 
 const INSTANCE = Ref{Tuple{String, Int}}()
 

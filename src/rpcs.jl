@@ -39,7 +39,7 @@ end
 
 
 module Debugger
-    enable() = (debuggerId = "0")
+    enable() = (;debuggerId = "0")
     setPauseOnExceptions(params) = ()
     setAsyncCallStackDepth(params) = ()
     setBlackboxPatterns(params) = ()
@@ -53,5 +53,4 @@ module Runtime
     enable() = ()
     runIfWaitingForDebugger() = ()
     getIsolateId() = ()
-
 end
