@@ -18,7 +18,7 @@ function dispatch(rpc, ws)
         "Debugger.setPauseOnExceptions" => Debugger.setPauseOnExceptions(rpc.params)
         "Debugger.setAsyncCallStackDepth" => Debugger.setAsyncCallStackDepth(rpc.params)
         "Debugger.setBlackboxPatterns" => Debugger.setBlackboxPatterns(rpc.params)
-        "Debugger.setBreakpointActive" => Debugger.setBreakpointActive(rpc.params)
+        "Debugger.setBreakpointsActive" => Debugger.setBreakpointsActive(rpc.params)
         "Debugger.setBreakpointByUrl"  => Debugger.setBreakpointByUrl(rpc.params)
         "Debugger.enable" => Debugger.enable()
         _                 => dispatch_unhandled(rpc)
@@ -39,11 +39,11 @@ end
 
 
 module Debugger
-    enable() = ()
+    enable() = (debuggerId = "0")
     setPauseOnExceptions(params) = ()
     setAsyncCallStackDepth(params) = ()
     setBlackboxPatterns(params) = ()
-    setBreakpointActive(params) = ()
+    setBreakpointsActive(params) = ()
     setBreakpointByUrl(params) = ()
     # pause
     # setSkipAllPauses
